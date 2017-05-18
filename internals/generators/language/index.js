@@ -34,7 +34,7 @@ module.exports = {
     actions.push({
       type: 'modify',
       path: '../../app/i18n.js',
-      pattern: /('react-intl\/locale-data\/[a-z]+';\n)(?!.*'react-intl\/locale-data\/[a-z]+';)/g,
+      pattern: /('react-intl\/locale-data\/[a-z]+'\n)(?!.*'react-intl\/locale-data\/[a-z]+')/g,
       templateFile: './language/intl-locale-data.hbs',
     })
     actions.push({
@@ -46,13 +46,13 @@ module.exports = {
     actions.push({
       type: 'modify',
       path: '../../app/i18n.js',
-      pattern: /(from\s'.\/translations\/[a-z]+.json';\n)(?!.*from\s'.\/translations\/[a-z]+.json';)/g,
+      pattern: /(from\s'.\/translations\/[a-z]+.json'\n)(?!.*from\s'.\/translations\/[a-z]+.json')/g,
       templateFile: './language/translation-messages.hbs',
     })
     actions.push({
       type: 'modify',
       path: '../../app/i18n.js',
-      pattern: /(addLocaleData\([a-z]+LocaleData\);\n)(?!.*addLocaleData\([a-z]+LocaleData\);)/g,
+      pattern: /(addLocaleData\([a-z]+LocaleData\)\n)(?!.*addLocaleData\([a-z]+LocaleData\))/g,
       templateFile: './language/add-locale-data.hbs',
     })
     actions.push({

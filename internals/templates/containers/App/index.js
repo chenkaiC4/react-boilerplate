@@ -17,7 +17,7 @@ export default class App extends React.PureComponent { // eslint-disable-line re
 
   static propTypes = {
     children: React.PropTypes.node,
-  };
+  }
 
   render() {
     return (
